@@ -1,14 +1,15 @@
 ---
 layout: post
-title: Subtract tow dates with Apache Drill
+title: Subtract two dates with Apache Drill
 tags: [apache drill]
 ---
 
-Apache Drill is a fantastic SQL on Hadoop solution and comes with a large nmber of SL functinos for manipulating your data.
-However, despite a variety of date functions there is no simple way to calculate the difference between two dates or timestamps
-and get the result as a number.
+Apache Drill is a fantastic SQL on Hadoop solution and comes with a large number of SQL functions for manipulating your data.
+However I found it a real pain to subtract dates and get the result as a number.
 
-    SELECT DATEDIFF(check_in_date, check_out_date) FROM hotel_booking;
+{% highlight sql %}
+SELECT DATEDIFF(check_in_date, check_out_date) FROM hotel_booking;
+{% endhighlight %}
 
 Drill provides the AGE() function for substracting two dates.  However this results in a coded alphanumeric string whose data type is INTERVAL
 
@@ -31,8 +32,6 @@ These are the tings I could write about:
 - jsonpath
 - drill
 - apache zeppelin
--
--
-- spark
-- ignite
--
+
+- h2o RF traingin with IRIS data set
+
